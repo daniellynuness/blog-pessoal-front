@@ -1,0 +1,15 @@
+.bg{
+    background-color: black;
+}
+a{
+    cursor: pointer;
+}
+
+.fa{
+    font-size: 25pt;
+    color: white;
+}
+
+.fa-github:hover{
+    color: rgb(146, 127, 255);
+}
