@@ -1,36 +1,47 @@
 <div class="container-fluid">
     <div class="row d-flex align-items-center">
-        <div class="col-md-6 mt-3 mb-3">
+        <div class="col-md-6  mb-3">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10">
-                    <h1 class="text-center">Cadastro</h1>
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <h1 class="text-center pb-3">Cadastro</h1>
+                    <div class="form-row">
+                        <div class="col">
+                          <label for="nome">Nome</label>
+                          <input type="text" class="form-control" id="nome" placeholder="Primeiro e segundo nome">
+                        </div>
+                        <div class="col">
+                          <label for="usuario">Usuário</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="usuario" placeholder="Usuário">
+                          </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
-                    </div>
-
-                    <div class="form-group">
+                    <div class="form-group pt-2">
                         <label for="foto">Link da foto</label>
                         <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                     </div>
 
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Selecione arquivo</label>
+                      </div>
 
-                    <div class="form-group">
-                        <label for="confirmSenha">Confirmar senha</label>
-                        <input class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                            placeholder="Confirme sua senha">
-                    </div>
+                    <div class="form-row pt-2">
+                        <div class="col">
+                            <label for="senha">Senha</label>
+                          <input type="password" class="form-control" name="senha" id="senha" placeholder="Sua senha">
+                        </div>
+                        <div class="col">
+                            <label for="confirmSenha">Confirmar senha</label>
+                          <input type="password" class="form-control" name="confirmSenha" id="confirmSenha" placeholder="Confirmar senha">
+                        </div>
+                      </div>
 
-                    <div class="form-group">
+                      <div class="form-group pt-2">
                         <label for="tipo">Tipo de usuário</label>
                         <select class="form-control" name="tipo" id="tipo">
                             <option>Selecione um tipo de usuário:</option>
@@ -39,7 +50,7 @@
                         </select>
                     </div>
 
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center pt-2">
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
                         <button type="submit" class="btn btn-dark">Cadastrar</button>
                     </div>
