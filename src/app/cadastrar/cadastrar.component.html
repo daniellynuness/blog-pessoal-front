@@ -7,7 +7,7 @@
                     <div class="form-row">
                         <div class="col">
                           <label for="nome">Nome</label>
-                          <input type="text" class="form-control" id="nome" placeholder="Primeiro e segundo nome">
+                          <input [(ngModel)]='user.nome' type="text" class="form-control" id="nome" placeholder="Primeiro e segundo nome">
                         </div>
                         <div class="col">
                           <label for="usuario">Usuário</label>
@@ -15,35 +15,30 @@
                             <div class="input-group-prepend">
                               <div class="input-group-text">@</div>
                             </div>
-                            <input type="text" class="form-control" id="usuario" placeholder="Usuário">
+                            <input [(ngModel)]='user.usuario' type="text" class="form-control" id="usuario" placeholder="E-mail">
                           </div>
                         </div>
                     </div>
 
                     <div class="form-group pt-2">
                         <label for="foto">Link da foto</label>
-                        <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                     </div>
-
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Selecione arquivo</label>
-                      </div>
 
                     <div class="form-row pt-2">
                         <div class="col">
                             <label for="senha">Senha</label>
-                          <input type="password" class="form-control" name="senha" id="senha" placeholder="Sua senha">
+                          <input (input)='confirmSenha($event)' type="password" class="form-control" name="senha" id="senha" placeholder="Minimo 8 caracteres">
                         </div>
                         <div class="col">
                             <label for="confirmSenha">Confirmar senha</label>
-                          <input type="password" class="form-control" name="confirmSenha" id="confirmSenha" placeholder="Confirmar senha">
+                          <input [(ngModel)]='user.senha' type="password" class="form-control" name="confirmSenha" id="confirmSenha" placeholder="Confirmar senha">
                         </div>
                       </div>
 
                       <div class="form-group pt-2">
                         <label for="tipo">Tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                             <option>Selecione um tipo de usuário:</option>
                             <option value="normal">Normal</option>
                             <option value="adm">Administrador</option>
@@ -52,7 +47,7 @@
 
                     <div class="d-flex justify-content-center pt-2">
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-                        <button type="submit" class="btn btn-dark">Cadastrar</button>
+                        <button type="submit" class="btn btn-dark" (click)='cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
             </div>
