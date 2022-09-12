@@ -23,7 +23,7 @@ import { TemaComponent } from './tema/tema.component';
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
-    TemaComponent
+    TemaComponent,
   ],
   imports: [
     BrowserModule,
