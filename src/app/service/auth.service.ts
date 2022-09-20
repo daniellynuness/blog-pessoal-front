@@ -4,6 +4,7 @@ import { UserLogin } from '../model/UserLogin';
 import { Observable } from 'rxjs';
 import { User } from '../model/User';
 import { environment } from 'src/environments/environment.prod';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ import { environment } from 'src/environments/environment.prod';
 export class AuthService {
 
   constructor(
-    private http:HttpClient
+    private http:HttpClient,
+    private router: Router
   ) { }
   entrar(userLogin:UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar',userLogin)
